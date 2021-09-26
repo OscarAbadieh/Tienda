@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace win.Tienda
 {
-    public partial class FrmLogin : Form
+    public partial class FrmNuVentas : Form
     {
-        public FrmLogin()
+        public FrmNuVentas()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

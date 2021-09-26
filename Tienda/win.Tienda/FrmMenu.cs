@@ -26,5 +26,18 @@ namespace win.Tienda
         {
 
         }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmLogin = new FrmLogin();
+            frmLogin.ShowDialog();
+        }
+
+        private void ventaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmNVentas = new FrmNuVentas();
+            frmNVentas.MdiParent = this;
+            frmNVentas.Show();
+        }
     }
 }
