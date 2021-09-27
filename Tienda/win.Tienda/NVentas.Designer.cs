@@ -1,6 +1,6 @@
 ﻿namespace win.Tienda
 {
-    partial class FrmNuVentas
+    partial class NVentas
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace win.Tienda
 {
-    public partial class FrmMenu : Form
+    public partial class Menu : Form
     {
-        public FrmMenu()
+        public Menu()
         {
             InitializeComponent();
         }
@@ -24,20 +24,25 @@ namespace win.Tienda
 
         private void FrmMenu_Load(object sender, EventArgs e)
         {
-
+            LLogin();
         }
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frmLogin = new FrmLogin();
-            frmLogin.ShowDialog();
+            LLogin();
+        }
+
+        private void LLogin()
+        {
+            var Login = new Login();
+            Login.ShowDialog();
         }
 
         private void ventaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frmNVentas = new FrmNuVentas();
-            frmNVentas.MdiParent = this;
-            frmNVentas.Show();
+            var NVentas = new NVentas();
+            NVentas.MdiParent = this;
+            NVentas.Show();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -53,6 +58,20 @@ namespace win.Tienda
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void nuevoClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var NClientes = new NClientes();
+            NClientes.MdiParent = this;
+            NClientes.Show();
+        }
+
+        private void facturaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var Pagos = new Pagos();
+            Pagos.MdiParent = this;
+            Pagos.Show();
         }
     }
 }

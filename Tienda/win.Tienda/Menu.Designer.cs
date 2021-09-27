@@ -1,6 +1,6 @@
 ﻿namespace win.Tienda
 {
-    partial class FrmMenu
+    partial class Menu
     {
         /// <summary>
         /// Required designer variable.
@@ -52,6 +52,15 @@
             this.resporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pantalónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vestidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.camisaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.camisetaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pantalónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.shortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.camisaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.shortToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pantalónToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,6 +118,7 @@
             this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
             this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.facturaciónToolStripMenuItem.Text = "Pagos";
+            this.facturaciónToolStripMenuItem.Click += new System.EventHandler(this.facturaciónToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
@@ -125,6 +135,7 @@
             this.nuevoClienteToolStripMenuItem.Name = "nuevoClienteToolStripMenuItem";
             this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.nuevoClienteToolStripMenuItem.Text = "Nuevo cliente";
+            this.nuevoClienteToolStripMenuItem.Click += new System.EventHandler(this.nuevoClienteToolStripMenuItem_Click);
             // 
             // clienteExistenteToolStripMenuItem
             // 
@@ -146,7 +157,9 @@
             // 
             this.damasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.blusasToolStripMenuItem,
-            this.faldasToolStripMenuItem});
+            this.faldasToolStripMenuItem,
+            this.pantalónToolStripMenuItem,
+            this.vestidoToolStripMenuItem});
             this.damasToolStripMenuItem.Name = "damasToolStripMenuItem";
             this.damasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.damasToolStripMenuItem.Text = "Damas";
@@ -165,12 +178,21 @@
             // 
             // caballerosToolStripMenuItem
             // 
+            this.caballerosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.camisaToolStripMenuItem,
+            this.camisetaToolStripMenuItem,
+            this.pantalónToolStripMenuItem1,
+            this.shortToolStripMenuItem});
             this.caballerosToolStripMenuItem.Name = "caballerosToolStripMenuItem";
             this.caballerosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.caballerosToolStripMenuItem.Text = "Caballeros";
             // 
             // niñosToolStripMenuItem
             // 
+            this.niñosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.camisaToolStripMenuItem1,
+            this.shortToolStripMenuItem1,
+            this.pantalónToolStripMenuItem2});
             this.niñosToolStripMenuItem.Name = "niñosToolStripMenuItem";
             this.niñosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.niñosToolStripMenuItem.Text = "Niños";
@@ -222,7 +244,7 @@
             // 
             this.resporteToolStripMenuItem.Name = "resporteToolStripMenuItem";
             this.resporteToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.resporteToolStripMenuItem.Text = "Resporte ";
+            this.resporteToolStripMenuItem.Text = "Resporte Inventario";
             // 
             // salirToolStripMenuItem
             // 
@@ -236,7 +258,61 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 20);
             // 
-            // FrmMenu
+            // pantalónToolStripMenuItem
+            // 
+            this.pantalónToolStripMenuItem.Name = "pantalónToolStripMenuItem";
+            this.pantalónToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pantalónToolStripMenuItem.Text = "Pantalón";
+            // 
+            // vestidoToolStripMenuItem
+            // 
+            this.vestidoToolStripMenuItem.Name = "vestidoToolStripMenuItem";
+            this.vestidoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.vestidoToolStripMenuItem.Text = "Vestido";
+            // 
+            // camisaToolStripMenuItem
+            // 
+            this.camisaToolStripMenuItem.Name = "camisaToolStripMenuItem";
+            this.camisaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.camisaToolStripMenuItem.Text = "Camisa";
+            // 
+            // camisetaToolStripMenuItem
+            // 
+            this.camisetaToolStripMenuItem.Name = "camisetaToolStripMenuItem";
+            this.camisetaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.camisetaToolStripMenuItem.Text = "Camiseta";
+            // 
+            // pantalónToolStripMenuItem1
+            // 
+            this.pantalónToolStripMenuItem1.Name = "pantalónToolStripMenuItem1";
+            this.pantalónToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.pantalónToolStripMenuItem1.Text = "Pantalón";
+            // 
+            // shortToolStripMenuItem
+            // 
+            this.shortToolStripMenuItem.Name = "shortToolStripMenuItem";
+            this.shortToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.shortToolStripMenuItem.Text = "Short";
+            // 
+            // camisaToolStripMenuItem1
+            // 
+            this.camisaToolStripMenuItem1.Name = "camisaToolStripMenuItem1";
+            this.camisaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.camisaToolStripMenuItem1.Text = "Camisa";
+            // 
+            // shortToolStripMenuItem1
+            // 
+            this.shortToolStripMenuItem1.Name = "shortToolStripMenuItem1";
+            this.shortToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.shortToolStripMenuItem1.Text = "Short";
+            // 
+            // pantalónToolStripMenuItem2
+            // 
+            this.pantalónToolStripMenuItem2.Name = "pantalónToolStripMenuItem2";
+            this.pantalónToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.pantalónToolStripMenuItem2.Text = "Pantalón";
+            // 
+            // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -244,7 +320,7 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "FrmMenu";
+            this.Name = "Menu";
             this.Text = "Menú Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmMenu_Load);
@@ -281,5 +357,14 @@
         private System.Windows.Forms.ToolStripMenuItem niñosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem resporteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem pantalónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vestidoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem camisaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem camisetaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pantalónToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem shortToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem camisaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem shortToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem pantalónToolStripMenuItem2;
     }
 }
