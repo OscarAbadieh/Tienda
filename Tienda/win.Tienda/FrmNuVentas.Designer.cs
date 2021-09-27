@@ -30,13 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // FrmVentas
+            // FrmNuVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Name = "FrmVentas";
+            this.Name = "FrmNuVentas";
             this.Text = "Nueva Venta";
+            this.Load += new System.EventHandler(this.FrmNuVentas_Load);
             this.ResumeLayout(false);
 
         }
