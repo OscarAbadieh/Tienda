@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace win.Tienda
 {
-    public partial class Login : Form
+    public partial class FrmLogin : Form
     {
-        public Login()
+        public FrmLogin()
         {
             InitializeComponent();
         }
@@ -35,7 +35,7 @@ namespace win.Tienda
             usuario = textBox1.Text;
             contrasena = textBox2.Text; 
 
-            if (usuario == "admin" && contrasena == "123")
+            if (usuario == "admin" && contrasena == "123456")
             {
                 this.Close();
             }
@@ -43,6 +43,21 @@ namespace win.Tienda
             {
                 MessageBox.Show("Usuario o Contraseña incorrecta");
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

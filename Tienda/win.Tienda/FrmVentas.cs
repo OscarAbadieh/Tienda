@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace win.Tienda
 {
-    public partial class Pagos : Form
+    public partial class FrmVentas : Form
     {
-        public Pagos()
+        public FrmVentas()
         {
             InitializeComponent();
+        }
+
+        private void FrmNuVentas_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

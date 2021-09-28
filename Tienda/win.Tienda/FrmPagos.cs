@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace win.Tienda
 {
-    public partial class NClientes : Form
+    public partial class FrmPagos : Form
     {
-        public NClientes()
+        public FrmPagos()
         {
             InitializeComponent();
         }
