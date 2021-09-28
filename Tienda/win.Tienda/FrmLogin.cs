@@ -35,7 +35,7 @@ namespace win.Tienda
             usuario = textBox1.Text;
             contrasena = textBox2.Text; 
 
-            if (usuario == "admin" && contrasena == "123456")
+            if (usuario == "admin" && contrasena == "12345")
             {
                 this.Close();
             }
