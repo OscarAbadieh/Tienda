@@ -77,14 +77,14 @@
             // nuevoClienteToolStripMenuItem
             // 
             this.nuevoClienteToolStripMenuItem.Name = "nuevoClienteToolStripMenuItem";
-            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.nuevoClienteToolStripMenuItem.Text = "Articulos";
             this.nuevoClienteToolStripMenuItem.Click += new System.EventHandler(this.nuevoClienteToolStripMenuItem_Click);
             // 
             // clienteExistenteToolStripMenuItem
             // 
             this.clienteExistenteToolStripMenuItem.Name = "clienteExistenteToolStripMenuItem";
-            this.clienteExistenteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clienteExistenteToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.clienteExistenteToolStripMenuItem.Text = "Clientes";
             this.clienteExistenteToolStripMenuItem.Click += new System.EventHandler(this.clienteExistenteToolStripMenuItem_Click);
             // 
@@ -100,14 +100,14 @@
             // ventaToolStripMenuItem
             // 
             this.ventaToolStripMenuItem.Name = "ventaToolStripMenuItem";
-            this.ventaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ventaToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.ventaToolStripMenuItem.Text = "Nueva Venta";
             this.ventaToolStripMenuItem.Click += new System.EventHandler(this.ventaToolStripMenuItem_Click);
             // 
             // facturaciónToolStripMenuItem
             // 
             this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
-            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.facturaciónToolStripMenuItem.Text = "Pagos";
             this.facturaciónToolStripMenuItem.Click += new System.EventHandler(this.facturaciónToolStripMenuItem_Click);
             // 
