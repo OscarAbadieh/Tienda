@@ -10,7 +10,7 @@ namespace BLTienda
     public class ProductosBL
     {
         /*Creacion de Lista Binding (arreglo) para los productos*/
-       public BindingList<Producto> ListaProductos { get; set; }
+        public BindingList<Producto> ListaProductos { get; set; }
 
         public ProductosBL()
         {
@@ -19,12 +19,12 @@ namespace BLTienda
 
             /*Instanciamos productos en la lista y colocamos todos 
              los datos del producto en sus propiedades.*/
-             
+
             //Producto1
             var Producto1 = new Producto();
             Producto1.ID = 1;
             Producto1.Descripcion = "Camisetas";
-            Producto1. Precio = 65;
+            Producto1.Precio = 65;
             Producto1.Existencia = 100;
             Producto1.Activo = true;
 
@@ -60,15 +60,83 @@ namespace BLTienda
 
             ListaProductos.Add(Producto4);
 
-        /*Obtencion de Productos*/
+            /*Obtencion de Productos*/
         }
         public BindingList<Producto> ObtenerProductos()
         {
             return ListaProductos;
         }
+        /*Creacion de una clase para guardar los productos, el cual se recibira un producto con parametro YA*/
 
+        public Resultado GuardarProducto(Producto producto)
+        {
+            var resultado = Validar(producto);
+            if (resultado.Exitoso == false)
+            {
+                return resultado;
+            }
+
+            if (producto.ID == 0)
+            {
+                /*Funcion max se encarga de buscar  todos los productos y calcula el maximo id que encuentra*/
+                producto.ID = ListaProductos.Max(item => item.ID) + 1;
+            }
+            resultado.Exitoso = true;
+            return resultado;
+        }
+
+        /*Agregar producto lo agregamos a producto bl  en una clase Yorlany Alva*/
+
+        public void AgregarProducto()
+        {
+            var nuevoProducto = new Producto();
+            ListaProductos.Add(nuevoProducto);
+        }
+
+        /*Creamos una clase para eliminar producto Ya*/
+
+        public bool EliminarProducto(int id)
+        {
+
+            foreach (var producto in ListaProductos)
+            {
+                if (producto.ID == id)
+                {
+                    ListaProductos.Remove(producto);
+                    return true;
+
+                }
+            }
+
+
+            return false;
+        }
+        /* Creamos un metodo de tipo private resultado que se encargara de validar un producto*/
+          private Resultado Validar(Producto producto)
+        {
+            var resultado = new Resultado();
+            resultado.Exitoso = true;
+
+            if(string.IsNullOrEmpty(producto.Descripcion) == true)
+            {
+                resultado.Mensaje = "Ingrese una descripcion ";
+                resultado.Exitoso = false;
+            }
+            if (producto.Existencia < 0 )
+            {
+                resultado.Mensaje = "La existencia debe ser mayor de cero ";
+                resultado.Exitoso = false;
+            }
+            if (producto.Precio < 0)
+            {
+                resultado.Mensaje = "El precio debe ser mayor de cero ";
+                resultado.Exitoso = false;
+            }
+            return resultado;
+        }
+    }
         /*Propiedades de los productos*/
-      }
+    }
     public class Producto
     {
         public int ID { get; set; }
@@ -77,5 +145,11 @@ namespace BLTienda
         public int Existencia { get; set; }
         public bool Activo { get; set; }
       }
-   }
+
+/* Creamos una nueva clase que lo que tendra es un resultado YA*/
+   public class Resultado
+{
+    public bool Exitoso { get; set; }
+    public string Mensaje { get; set; }
+}
     
