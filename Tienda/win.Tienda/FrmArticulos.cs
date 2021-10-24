@@ -121,6 +121,11 @@ namespace win.Tienda
         {
 
         }
+
+        private void iDTextBox_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

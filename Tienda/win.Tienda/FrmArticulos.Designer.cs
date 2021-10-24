@@ -290,6 +290,7 @@ namespace win.Tienda
             this.iDTextBox.ReadOnly = true;
             this.iDTextBox.Size = new System.Drawing.Size(164, 20);
             this.iDTextBox.TabIndex = 8;
+            this.iDTextBox.TextChanged += new System.EventHandler(this.iDTextBox_TextChanged_1);
             // 
             // precioTextBox
             // 
