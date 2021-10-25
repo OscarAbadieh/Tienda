@@ -43,8 +43,8 @@ namespace win.Tienda
             if (resultado.Exitoso == true)
             {
                 listaProductosBindingSource.ResetBindings(false);
-
                 DeshabilitarHabilitarBotones(true);
+                MessageBox.Show("Producto Guardado");
             }
             else
             {
