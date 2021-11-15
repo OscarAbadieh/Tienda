@@ -1,4 +1,6 @@
-﻿namespace win.Tienda
+﻿using System;
+
+namespace win.Tienda
 {
     partial class FrmLogin
     {
@@ -28,32 +30,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            label1 = new System.Windows.Forms.Label();
+            textBox1 = new System.Windows.Forms.TextBox();
+            textBox2 = new System.Windows.Forms.TextBox();
+            label2 = new System.Windows.Forms.Label();
+            button1 = new System.Windows.Forms.Button();
+            button2 = new System.Windows.Forms.Button();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(pictureBox1)).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(65, 158);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Usuario: ";
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(65, 158);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(49, 13);
+            label1.TabIndex = 0;
+            label1.Text = "Usuario: ";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(128, 155);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(90, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            textBox1.Location = new System.Drawing.Point(128, 155);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new System.Drawing.Size(90, 20);
+            textBox1.TabIndex = 1;
+            textBox1.TextChanged += new EventHandler(textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -102,32 +104,52 @@
             this.pictureBox1.Size = new System.Drawing.Size(110, 113);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.Click += new System.EventHandler(pictureBox1_Click);
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.ClientSize = new System.Drawing.Size(270, 293);
-            this.ControlBox = false;
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "Login";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Inicia sesíon en tu cuenta";
-            this.Load += new System.EventHandler(this.Login_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.PaleTurquoise;
+            ClientSize = new System.Drawing.Size(270, 293);
+            ControlBox = false;
+            Controls.Add(pictureBox1);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(textBox2);
+            Controls.Add(label2);
+            Controls.Add(textBox1);
+            Controls.Add(label1);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "Login";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Inicia sesíon en tu cuenta";
+            Load += new EventHandler(Login_Load);
+            ((System.ComponentModel.ISupportInitialize)(pictureBox1)).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+          
         }
 
         #endregion

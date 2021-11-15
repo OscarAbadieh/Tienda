@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A873263D-A73D-4A1D-A4A4-88985ABF2363}</ProjectGuid>
+    <ProjectGuid>{AEF48593-FF34-4125-B555-CBB1D9773AC6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>win.Tienda</RootNamespace>
-    <AssemblyName>win.Tienda</AssemblyName>
+    <RootNamespace>Win.Tienda</RootNamespace>
+    <AssemblyName>Win.Tienda</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -66,59 +66,70 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLTienda\producto.cs" />
-    <Compile Include="FrmArticulos.cs">
+    <Compile Include="FormClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmArticulos.Designer.cs">
-      <DependentUpon>FrmArticulos.cs</DependentUpon>
+    <Compile Include="FormClientes.Designer.cs">
+      <DependentUpon>FormClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmClientes.cs">
+    <Compile Include="FormFactura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmClientes.Designer.cs">
-      <DependentUpon>FrmClientes.cs</DependentUpon>
+    <Compile Include="FormFactura.Designer.cs">
+      <DependentUpon>FormFactura.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmLogin.cs">
+    <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmLogin.Designer.cs">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMenu.cs">
+    <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMenu.Designer.cs">
-      <DependentUpon>FrmMenu.cs</DependentUpon>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmVentas.cs">
+    <Compile Include="FormPago.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmVentas.Designer.cs">
-      <DependentUpon>FrmVentas.cs</DependentUpon>
+    <Compile Include="FormPago.Designer.cs">
+      <DependentUpon>FormPago.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPagos.cs">
+    <Compile Include="FormProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPagos.Designer.cs">
-      <DependentUpon>FrmPagos.cs</DependentUpon>
+    <Compile Include="FormProductos.Designer.cs">
+      <DependentUpon>FormProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVentas.Designer.cs">
+      <DependentUpon>FormVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmArticulos.resx">
-      <DependentUpon>FrmArticulos.cs</DependentUpon>
+    <EmbeddedResource Include="FormClientes.resx">
+      <DependentUpon>FormClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmClientes.resx">
-      <DependentUpon>FrmClientes.cs</DependentUpon>
+    <EmbeddedResource Include="FormFactura.resx">
+      <DependentUpon>FormFactura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLogin.resx">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMenu.resx">
-      <DependentUpon>FrmMenu.cs</DependentUpon>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmVentas.resx">
-      <DependentUpon>FrmVentas.cs</DependentUpon>
+    <EmbeddedResource Include="FormPago.resx">
+      <DependentUpon>FormPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductos.resx">
+      <DependentUpon>FormProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVentas.resx">
+      <DependentUpon>FormVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -131,9 +142,19 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\BLTienda.Producto.datasource" />
-    <None Include="Properties\DataSources\BLTienda.ProductosBL.datasource" />
-    <None Include="Properties\DataSources\BLTienda.SeguridadBL.datasource" />
+    <None Include="Properties\DataSources\BL.Tienda.Categoria.datasource" />
+    <None Include="Properties\DataSources\BL.Tienda.CategoriaBL.datasource" />
+    <None Include="Properties\DataSources\BL.Tienda.Cliente.datasource" />
+    <None Include="Properties\DataSources\BL.Tienda.ClienteBL.datasource" />
+    <None Include="Properties\DataSources\BL.Tienda.Contexto.datasource" />
+    <None Include="Properties\DataSources\BL.Tienda.FacturaBL.datasource" />
+    <None Include="Properties\DataSources\BL.Tienda.FacturaDetalle.datasource" />
+    <None Include="Properties\DataSources\BL.Tienda.Producto.datasource" />
+    <None Include="Properties\DataSources\BL.Tienda.ProductosBL.datasource" />
+    <None Include="Properties\DataSources\BL.Tienda.Resutado.datasource" />
+    <None Include="Properties\DataSources\BL.Tienda.SeguridadBL.datasource" />
+    <None Include="Properties\DataSources\BL.Tienda.Tipo.datasource" />
+    <None Include="Properties\DataSources\BL.Tienda.TipoBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -145,18 +166,19 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Logotipo Superminimalista con flor y Texto Curvo en fondo beis.jpg" />
+    <None Include="Resources\WhatsApp Image 2021-11-04 at 10.38.44 PM.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BLTienda\BLTienda.csproj">
-      <Project>{80abb2ba-d8d3-493f-90a8-0405b0415cd1}</Project>
-      <Name>BLTienda</Name>
+    <ProjectReference Include="..\BL.Tienda\BL.Tienda.csproj">
+      <Project>{e604ef1a-d6c6-4722-8556-18ea3e42e29f}</Project>
+      <Name>BL.Tienda</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-11-04 at 10.38.44 PM1.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
