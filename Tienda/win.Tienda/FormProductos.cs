@@ -196,6 +196,7 @@ namespace Win.Tienda
 
             }
             listaProductosBindingSource.ResetBindings(false);
+
         }
     }
 }
